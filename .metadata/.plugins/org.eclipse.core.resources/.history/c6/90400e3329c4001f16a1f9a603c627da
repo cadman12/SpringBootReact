@@ -1,0 +1,30 @@
+package edu.pnu.domain.dto;
+
+import java.util.Date;
+
+import edu.pnu.domain.Board;
+import edu.pnu.domain.Member;
+import jakarta.persistence.Column;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter @Setter @ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class BoardDTO {
+	private Long id;
+	private String title;
+	@Builder.Default
+	private Date createDate = new Date();
+	private String username;
+}

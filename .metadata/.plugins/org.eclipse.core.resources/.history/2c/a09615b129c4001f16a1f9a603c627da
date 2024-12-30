@@ -1,0 +1,36 @@
+package edu.pnu.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import edu.pnu.domain.Board;
+import edu.pnu.domain.dto.BoardDTO;
+import edu.pnu.repository.BoardRepository;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class BoardService {
+
+	private final BoardRepository boardRepo;
+
+	public List<BoardDTO> getBoards() {
+		List<Board> list = boardRepo.findAll();
+		
+		List<BoardDTO> ret = new ArrayList<>();
+		
+		
+		
+		return ret;
+	}
+
+	public Board getBoard(Long id) {
+		return boardRepo.findById(id).get();
+	}
+	
+	public List<Board> getBoard(String username) {
+		return boardRepo.findByUsername(username);
+	}
+}

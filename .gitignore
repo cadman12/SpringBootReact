@@ -1,0 +1,13 @@
+# Spring Boot
+BackEndTemplate/target/
+BackEndTemplate/*.iml
+BackEndTemplate/.idea/
+
+# React
+frontendtemplate/node_modules/
+frontendtemplate/build/
+frontendtemplate/.env
+
+# General
+.DS_Store
+*.log
