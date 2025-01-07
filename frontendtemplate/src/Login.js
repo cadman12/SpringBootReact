@@ -11,7 +11,7 @@ const Login = (props) => {
 
   const handleGoogleLogin = async () => {
     try {
-      window.location.href = `http://localhost:8080/login/oauth2/authorization/google`;
+      window.location.href = `http://localhost:8080/oauth2/authorization/google`;
     } catch (error) {
       console.error('Google OAuth2 login failed:', error);
     }
